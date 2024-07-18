@@ -33,10 +33,12 @@ bun install
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 3. **Ensure sufficient funds:**
+
 Make sure your wallet has the required fee for creating tokens.
 
 
 Todos: 
+
 [x] Fix the ether providers method by downgrading to version 5.x.x
 
 [ ] Investigate Yup test function that should have prevented onSubmit from working
