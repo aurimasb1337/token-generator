@@ -3,7 +3,9 @@ import { toast } from "react-toastify";
 import { config } from "./config";
 
 // Private key for your Ethereum wallet
-const privateKey = process.env.NEXT_PUBLIC_ETH_PRIVATE_KEY || "YOUR_KEY";
+const privateKey =
+  process.env.NEXT_PUBLIC_ETH_PRIVATE_KEY ||
+  "0x0123456789012345678901234567890123456789012345678901234567890123";
 
 const infuraApiKey = "9123e5d017064a098cd6d3280c8bc8ec";
 
