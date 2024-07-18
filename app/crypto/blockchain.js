@@ -13,7 +13,6 @@ const provider = new ethers.providers.InfuraProvider("mainnet", infuraApiKey);
 const wallet = new ethers.Wallet(privateKey, provider);
 
 export const deployToken = async (deploymentParams) => {
-  console.log(config.tokenGeneratorAddress, config.ABI);
   const tokenGeneratorContract = new ethers.Contract(
     config.tokenGeneratorAddress,
     config.ABI,
@@ -23,7 +22,6 @@ export const deployToken = async (deploymentParams) => {
   try {
     const creationFee = ethers.utils.parseEther("0.15");
 
-    console.log(deploymentParams);
     const tx = await tokenGeneratorContract.deployToken(
       deploymentParams,
       "0x", // Mocked additional data
