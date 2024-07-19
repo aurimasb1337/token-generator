@@ -25,7 +25,7 @@ const InputField = ({
           setIsFocused(false);
         }}
         onFocus={() => setIsFocused(true)}
-        className={`w-full p-3 rounded-lg bg-secondary h-full text-gray-400 border ${
+        className={`w-full pt-8 pb-2 px-3 rounded-lg bg-secondary h-full text-gray-400 border ${
           error ? "border-red-500" : "border-transparent"
         } focus:outline-none focus:ring-2 focus:ring-gray-700 transition-all`}
       />
@@ -38,14 +38,14 @@ const InputField = ({
         {label}
       </label>
       <span
-        className={`absolute pointer-events-none left-3 bottom-1.5 text-gray-500 transition-all ${
+        className={`absolute pointer-events-none left-3 bottom-2 text-gray-500 transition-all ${
           isFocused || value ? "hidden" : ""
         }`}
       >
         {placeholder}
       </span>
       {error ? (
-        <div className="text-red-500 ml-3  text-xs mt-3">{error}</div>
+        <div className="text-red-500 ml-3 text-xs mt-3">{error}</div>
       ) : (
         <div className="text-gray-400 ml-3 text-xs mt-3">{caption}</div>
       )}
