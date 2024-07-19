@@ -159,7 +159,7 @@ const TokenForm = () => {
     <div className="min-h-screen flex items-center justify-center p-4">
       <form
         onSubmit={formik.handleSubmit}
-        className="text-white  rounded-lg w-full gap-10 flex-col flex"
+        className="text-white  rounded-lg w-full gap-6 flex-col flex"
       >
         <span className="text-gray-300">
           Enter basic details about your token
@@ -295,18 +295,20 @@ const TokenForm = () => {
           </div>
         </div>
 
-        <div className="mx-auto">
-          <button
-            disabled={!formik.touched}
-            type="submit"
-            className="w-auto  bg-primary text-text-dark py-3 px-6 rounded-lg"
-          >
-            DEPLOY
-          </button>
-        </div>
-        <div className="text-text-secondary text-sm text-center">
-          <p>Service fee: 0.25 ETH</p>
-          <span>Gas fee will be added to final amount</span>
+        <div className="items-center flex flex-col gap-3">
+          <div>
+            <button
+              disabled={!formik.touched}
+              type="submit"
+              className="w-auto  bg-primary text-text-dark py-3 px-6 rounded-lg"
+            >
+              DEPLOY
+            </button>
+          </div>
+          <div className="text-text-secondary text-sm text-center">
+            <p>Service fee: 0.25 ETH</p>
+            <span>Gas fee will be added to final amount</span>
+          </div>
         </div>
       </form>
     </div>
