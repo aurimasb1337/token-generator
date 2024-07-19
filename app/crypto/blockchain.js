@@ -7,9 +7,11 @@ const privateKey =
   process.env.NEXT_PUBLIC_ETH_PRIVATE_KEY ||
   "0x0123456789012345678901234567890123456789012345678901234567890123";
 
-const infuraApiKey = "9123e5d017064a098cd6d3280c8bc8ec";
+//const infuraApiKey = "9123e5d017064a098cd6d3280c8bc8ec";
 
-const provider = new ethers.providers.InfuraProvider("mainnet", infuraApiKey);
+const baseNetworkRpcUrl = "https://mainnet.base.org";
+const provider = new ethers.providers.JsonRpcProvider(baseNetworkRpcUrl);
+
 const wallet = new ethers.Wallet(privateKey, provider);
 
 export const deployToken = async (deploymentParams) => {
