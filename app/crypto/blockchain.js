@@ -22,7 +22,7 @@ export const deployToken = async (deploymentParams) => {
   );
 
   try {
-    const creationFee = ethers.utils.parseEther("0.15");
+    const creationFee = ethers.utils.parseEther("0.015");
 
     const tx = await tokenGeneratorContract.deployToken(
       deploymentParams,
